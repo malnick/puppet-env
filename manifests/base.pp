@@ -28,6 +28,7 @@ class env::base (
     ensure  => directory,
     require => User['malnick'],
     owner   => 'malnick',
+    group   => 'malnick',
     mode    => 0755,
   }
 

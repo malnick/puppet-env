@@ -41,9 +41,6 @@ class env::vimplugins (
     'go' => {
       'source' => 'https://github.com/fatih/vim-go'
     },
-    'pep8-indent' => {
-      'source' => 'https://github.com/hynek/vim-python-pep8-indent',
-    },
     'vagrant' => {
       'source' => 'https://github.com/hashivim/vim-vagrant'
     },
