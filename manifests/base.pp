@@ -2,6 +2,10 @@ class env::base (
   $home_dir,
 ){
   class { 'ohmyzsh': }
+  ohmyzsh::install { ['root', 'malnick']: }->
+  file { "${home_dir}/.oh-my-zsh/themes/gitster.zsh-theme":
+    source  => 'puppet:///modules/env/gitster.zsh-theme',
+  }
 
   user { 'malnick':
     ensure      =>  present,

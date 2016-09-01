@@ -15,7 +15,10 @@ class env::dotfiles($home_dir){
   }
 
   $dotfiles = {
-    "${home_dir}/.vimrc" => {'target' => "${home_dir}/personal/dotfiles/vimrc"}, 
+    "${home_dir}/.vimrc"      => {'target' => "${home_dir}/personal/dotfiles/vimrc"}, 
+    "${home_dir}/.tmux.conf"  => {'target' => "${home_dir}/personal/dotfiles/tmux.conf"}, 
+    "${home_dir}/.aws"        => {'target' => "${home_dir}/personal/dotfiles/aws"}, 
+    "${home_dir}/.zshrc"      => {'target' => "${home_dir}/personal/dotfiles/zshrc"}, 
   }
 
   create_resources(file, $dotfiles, $dotfile_defaults)
