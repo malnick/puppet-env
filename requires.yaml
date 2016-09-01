@@ -1,3 +1,8 @@
 ---
 sudo: https://github.com/saz/puppet-sudo
 ohmyzsh: https://github.com/acme/puppet-acme-oh-my-zsh
+vim: https://github.com/huskycode/puppet-huskycode-vim 
+wget: https://github.com/maestrodev/puppet-wget
+vcsrepo: https://github.com/puppetlabs/puppetlabs-vcsrepo
+stdlib: https://github.com/puppetlabs/puppetlabs-stdlib
+concat: https://github.com/puppetlabs/puppetlabs-concat
