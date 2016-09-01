@@ -1,0 +1,3 @@
+---
+sudo: https://github.com/saz/puppet-sudo
+ohmyzsh: https://github.com/acme/puppet-acme-oh-my-zsh
