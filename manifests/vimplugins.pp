@@ -28,7 +28,7 @@ class env::vimplugins (
     },
     'syntastic' => {
       'source' => 'https://github.com/rodjek/vim-puppet'
-    }
+    },
     'airline-themes' => {
       'source' => 'https://github.com/vim-airline/vim-airline-themes'
     },

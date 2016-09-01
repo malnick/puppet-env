@@ -6,3 +6,4 @@ wget: https://github.com/maestrodev/puppet-wget
 vcsrepo: https://github.com/puppetlabs/puppetlabs-vcsrepo
 stdlib: https://github.com/puppetlabs/puppetlabs-stdlib
 concat: https://github.com/puppetlabs/puppetlabs-concat
+tmux: https://github.com/zanloy/puppet-tmux 

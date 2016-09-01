@@ -1,13 +1,9 @@
 class env (
-  $home_dir = '/home/malnick/', 
+  $home_dir = '/home/malnick', 
 ) inherits ::env::params {
   
-  class { ::env::base:
-    home_dir => $home_dir
-  }->
-  
-  class { ::env::vimplugins:
-    home_dir => $home_dir
-  }
+  class { ::env::base: home_dir => $home_dir }->
+  class { ::env::packages: home_dir => $home_dir }-> 
+  class { ::env::vimplugins: home_dir => $home_dir }
 
 }
