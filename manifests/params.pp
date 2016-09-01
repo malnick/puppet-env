@@ -1,4 +1,3 @@
-class params {
-  $homedir = '/home/malnick/'  
-
+class env::params {
+  $home_dir = '/home/malnick/'  
 }
