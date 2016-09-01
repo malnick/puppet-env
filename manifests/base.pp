@@ -4,15 +4,31 @@ class env::base (
   class { 'ohmyzsh': }
 
   user { 'malnick':
-    ensure =>  present,
-    managehome => true,
-    shell => '/bin/zsh',
-    require => Class['ohmyzsh'],
+    ensure      =>  present,
+		password		=> '$6$xLn/pEur$HloKijb71ny8TEnjZZX9fCpM2qLE03FvPWNTHW/ouieBmbloX2H.05FTe/.I6zo/N7cOHBx/tj2lZWd5BnmKX1',
+    managehome  => true,
+    shell       => '/bin/zsh',
+    require     => Class['ohmyzsh'],
+  }
+
+  user { 'root':
+    ensure   => present,
+    password => '$6$xLn/pEur$HloKijb71ny8TEnjZZX9fCpM2qLE03FvPWNTHW/ouieBmbloX2H.05FTe/.I6zo/N7cOHBx/tj2lZWd5BnmKX1',
+    shell    => '/bin/zsh',
+    require  => Class['ohmyzsh'],
+    uid      => '0',
+  }
+
+	sudo::conf { 'malnick':
+     ensure  => present,
+     content => '%malnick ALL=(ALL) ALL',
   }
 
   $file_defaults = {
-    ensure => directory,
+    ensure  => directory,
     require => User['malnick'],
+    owner   => 'malnick',
+    mode    => 0755,
   }
 
   $required_dirs = { 

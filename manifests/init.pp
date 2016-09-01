@@ -4,6 +4,7 @@ class env (
   
   class { ::env::base: home_dir => $home_dir }->
   class { ::env::packages: home_dir => $home_dir }-> 
-  class { ::env::vimplugins: home_dir => $home_dir }
+  class { ::env::vimplugins: home_dir => $home_dir }->
+  class { ::env::dotfiles: home_dir => $home_dir }
 
 }
