@@ -12,7 +12,7 @@ class env::packages(
   
   package { 'spotify-client': 
     ensure  => present,
-    require => Apt::key['spotify'],
+    require => Class['apt'], 
   }
 
   $required_pkgs = {
