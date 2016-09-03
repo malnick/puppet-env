@@ -7,5 +7,6 @@ class env (
   class { ::env::vimplugins:  home_dir => $home_dir }->
   class { ::env::dotfiles:    home_dir => $home_dir }
   class { ::env::go:          home_dir => $home_dir }
+  class { ::env::py:      home_dir => $home_dir }
 
 }

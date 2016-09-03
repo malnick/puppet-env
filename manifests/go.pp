@@ -7,7 +7,7 @@ class env::go ($home_dir){
 		workdir     	=> "${home_dir}/projects/",
 	} 
 
-  go_paths = {
+  $go_paths = {
     "${home_dir}/projects/go" => {
       "ensure" => "directory",
       "owner"  => "malnick",
@@ -23,5 +23,7 @@ class env::go ($home_dir){
       "owner"  => "malnick",
       "group"  => "malnick",
     }
+  }
+  create_resources(file, $go_paths)
  
 }

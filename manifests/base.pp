@@ -41,13 +41,14 @@ class env::base (
     "${home_dir}/personal" => {},
     "${home_dir}/temp" => {},
   }
-
+  
   create_resources(file, $required_dirs, $file_defaults)
   
-  $required_pkgs = [
-    'google-chrome-stable',
-    'build-essential',
-    'tmux',
-  ]
+  $required_pkgs = {
+    'google-chrome-stable' => {'ensure' => 'present'},
+    'build-essential' => {'ensure' => 'present'},
+  } 
+  
+  create_resources(package, $required_pkgs, $pkg_defaults)
 
 }
