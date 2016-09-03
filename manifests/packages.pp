@@ -5,7 +5,6 @@ class env::packages(
   class { 'nodejs': }
 
   include apt
-  apt::ppa { 'ppa:ubuntu-wine/ppa': }
   apt::key { 'spotify':
     id      => 'BBEBDCB318AD50EC6865090613B00F1FD2C19886',
     server  => 'hkp://keyserver.ubuntu.com:80',
@@ -15,7 +14,6 @@ class env::packages(
     'google-chrome-stable'  => {'ensure' => 'present'},
     'build-essential'       => {'ensure' => 'present'},
     'tree'                  => {'ensure' => 'present'},
-    'wine'                  => {'ensure' => 'present'},
     'nodejs-legacy'         => {'ensure' => 'present'},
     'spotify-client'        => {'ensure' => 'present'},
   } 
