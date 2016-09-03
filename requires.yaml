@@ -9,3 +9,4 @@ concat: https://github.com/puppetlabs/puppetlabs-concat
 tmux: https://github.com/zanloy/puppet-tmux 
 golang: https://github.com/scotty-c/puppet-golang
 python: https://github.com/stankevich/puppet-python
+apt: https://github.com/puppetlabs/puppetlabs-apt
