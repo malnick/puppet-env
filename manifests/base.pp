@@ -37,9 +37,15 @@ class env::base (
   }
 
   $required_dirs = { 
-    "${home_dir}/projects" => {},
-    "${home_dir}/personal" => {},
-    "${home_dir}/temp" => {},
+    "${home_dir}/projects"                => {},
+    "${home_dir}/projects/mesosphere"     => {},
+
+    "${home_dir}/projects/puppet"         => {},
+    "${home_dir}/projects/puppet/dev"     => {},
+    "${home_dir}/projects/puppet/modules" => {},
+
+    "${home_dir}/personal"                => {},
+    "${home_dir}/temp"                    => {},
   }
   
   create_resources(file, $required_dirs, $file_defaults)

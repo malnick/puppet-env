@@ -13,6 +13,6 @@ class env::packages(
     'wine'                  => {'ensure' => 'present'},
   } 
   
-  create_resources(package, $required_pkgs, $pkg_defaults)
+  create_resources(package, $required_pkgs)
 
 }
