@@ -10,3 +10,4 @@ tmux: https://github.com/zanloy/puppet-tmux
 golang: https://github.com/scotty-c/puppet-golang
 python: https://github.com/stankevich/puppet-python
 apt: https://github.com/puppetlabs/puppetlabs-apt
+nodejs: https://github.com/voxpupuli/puppet-nodejs

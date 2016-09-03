@@ -46,7 +46,10 @@ class env::vimplugins (
     },
     'rust' => {
       'source' => 'https://github.com/rust-lang/rust.vim'
-    }
+    },
+    'vim-instant-markdown' => {
+      'source' => 'https://github.com/suan/vim-instant-markdown'
+    },
 	}
 
 	create_resources(vim::plugin, $plugins)
