@@ -28,7 +28,7 @@ node default {
     with open(site_path, 'w') as f:
         f.write(site_file)
 
-    # subprocess.call(['puppet', 'apply', site_path])
+    subprocess.call(['puppet', 'apply', site_path])
 
 if __name__ == '__main__':
     deploy()
