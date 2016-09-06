@@ -7,23 +7,21 @@ class env::go ($home_dir){
 		workdir     	=> "${home_dir}/projects/",
 	} 
 
-  $go_paths = {
-    "${home_dir}/projects/go" => {
-      "ensure" => "directory",
-      "owner"  => "malnick",
-      "group"  => "malnick",
-    },
-    "${home_dir}/projects/go/bin" => {
-      "ensure" => "directory",
-      "owner"  => "malnick",
-      "group"  => "malnick",
-    },
-    "${home_dir}/projects/go/src" => {
-      "ensure" => "directory",
-      "owner"  => "malnick",
-      "group"  => "malnick",
-    }
+  $file_defaults = {
+    'ensure' => 'directory',
+    'owner'  => 'malnick',
+    'group'  => 'malnick',
   }
-  create_resources(file, $go_paths)
+
+  $go_paths = {
+    "${home_dir}/projects/go" => {},
+    "${home_dir}/projects/go/bin" => {},
+    "${home_dir}/projects/go/src" => {},
+    "${home_dir}/projects/go/src/github.com" => {},
+    "${home_dir}/projects/go/src/github.com/malnick" => {},
+    "${home_dir}/projects/go/src/github.com/mesosphere" => {},
+    "${home_dir}/projects/go/src/github.com/dcos" => {},
+  }
+  create_resources(file, $go_paths, $file_defaults)
  
 }
