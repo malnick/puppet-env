@@ -7,6 +7,18 @@ class env::base (
     source  => 'puppet:///modules/env/gitster.zsh-theme',
   }
 
+	include ssh
+	::ssh::client::config::user { 'malnick':
+		ensure 							=> present,
+		user_home_dir 			=> '/home/malnick',
+		manage_user_ssh_dir => false,
+		require							=> User['malnick'],
+		options 						=> {
+			'StrictHostKeyChecking' => 'no',
+			'UserKnownHostsFile'		=> '/dev/null',
+		}
+	}
+
   user { 'malnick':
     ensure      =>  present,
 		password		=> '$6$xLn/pEur$HloKijb71ny8TEnjZZX9fCpM2qLE03FvPWNTHW/ouieBmbloX2H.05FTe/.I6zo/N7cOHBx/tj2lZWd5BnmKX1',

@@ -4,19 +4,7 @@ class env::packages(
   class { '::tmux': }
   class { 'nodejs': }
 
-  include apt
-  apt::key { 'spotify':
-    id      => 'BBEBDCB318AD50EC6865090613B00F1FD2C19886',
-    server  => 'hkp://keyserver.ubuntu.com:80',
-  }
-  
-  package { 'spotify-client': 
-    ensure  => present,
-    require => Class['apt'], 
-  }
-
   $required_pkgs = {
-    'google-chrome-stable'          => {'ensure' => 'present'},
     'build-essential'               => {'ensure' => 'present'},
     'tree'                          => {'ensure' => 'present'},
     'nodejs-legacy'                 => {'ensure' => 'present'},
@@ -38,8 +26,9 @@ Driver "libinput"
 EndSection'
 
   file_line { '90-libinput.conf': 
-    path => '/usr/share/X11/xorg.conf.d/90-libinput.conf',
-    line => $libinput_config,
+    path    => '/usr/share/X11/xorg.conf.d/90-libinput.conf',
+    line    => $libinput_config,
+    require => Package['xserver-xorg-input-libinput'],
   }
   
   create_resources(package, $required_pkgs)
