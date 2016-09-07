@@ -5,7 +5,8 @@ class env::base (
   ohmyzsh::install { ['root', 'malnick']: }->
   file { "${home_dir}/.oh-my-zsh/themes/gitster.zsh-theme":
     source  => 'puppet:///modules/env/gitster.zsh-theme',
-  }
+  }->
+  ohmyzsh::theme { ['root', 'malnick']: theme => 'gitster' }
 
 	include ssh
 	::ssh::client::config::user { 'malnick':

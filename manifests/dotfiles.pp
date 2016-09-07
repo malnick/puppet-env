@@ -19,7 +19,6 @@ class env::dotfiles($home_dir){
     "${home_dir}/.tmux.conf"    => {'target' => "${home_dir}/personal/dotfiles/tmux.conf"}, 
     "${home_dir}/.aws"          => {'target' => "${home_dir}/personal/dotfiles/aws"}, 
     "${home_dir}/.zshrc"        => {'target'  => "${home_dir}/personal/dotfiles/zshrc"}, 
-    "${home_dir}/.oh-my-zsh"    => {'target'  => "${home_dir}/personal/dotfiles/oh-my-zsh"}, 
     "${home_dir}/.loga"         => {'target'  => "${home_dir}/personal/dotfiles/loga"}, 
     "${home_dir}/.cryptorious"  => {'target'  => "${home_dir}/personal/dotfiles/cryptorious"}, 
     "${home_dir}/.gitconfig"    => {'target'  => "${home_dir}/personal/dotfiles/gitconfig"}, 
