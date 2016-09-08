@@ -22,6 +22,7 @@ class env::dotfiles($home_dir){
     "${home_dir}/.loga"         => {'target'  => "${home_dir}/personal/dotfiles/loga"}, 
     "${home_dir}/.cryptorious"  => {'target'  => "${home_dir}/personal/dotfiles/cryptorious"}, 
     "${home_dir}/.gitconfig"    => {'target'  => "${home_dir}/personal/dotfiles/gitconfig"}, 
+    "${home_dir}/.gconf"        => {'target'  => "${home_dir}/personal/dotfiles/gconf"}, 
   }
 
   create_resources(file, $dotfiles, $dotfile_defaults)
