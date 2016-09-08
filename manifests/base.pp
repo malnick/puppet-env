@@ -1,8 +1,6 @@
 class env::base (
   $home_dir,
 ){
-  package { 'kernel': ensure => '4.7.3' }
-  
   file { $home_dir: 
     ensure  => directory,
     owner   => 'malnick',
