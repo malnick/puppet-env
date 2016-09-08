@@ -28,6 +28,11 @@ class env::base (
     uid      => '0',
   }
 
+  class { 'gnometerminalcolorssolarized': }
+  gnometerminalcolorssolarized::install { 'malnick': 
+    require => User['malnick'],
+  }
+
 	sudo::conf { 'malnick':
      ensure  => present,
      content => '%malnick ALL=(ALL) ALL',

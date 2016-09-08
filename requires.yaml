@@ -12,3 +12,4 @@ python: https://github.com/stankevich/puppet-python
 apt: https://github.com/puppetlabs/puppetlabs-apt
 nodejs: https://github.com/voxpupuli/puppet-nodejs
 ssh: https://github.com/saz/puppet-ssh
+gnometerminalcolorssolarized: https://github.com/acme/puppet-acme-gnometerminalcolorssolarized
