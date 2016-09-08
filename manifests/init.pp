@@ -3,6 +3,7 @@ class env (
 ) inherits ::env::params {
   
   class { ::env::base:        home_dir => $home_dir }->
+  class { ::env::ssh:         home_dir => $home_dir }->
   class { ::env::packages:    home_dir => $home_dir }-> 
   class { ::env::vimplugins:  home_dir => $home_dir }->
   class { ::env::go:          home_dir => $home_dir }->
