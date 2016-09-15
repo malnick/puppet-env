@@ -23,6 +23,7 @@ class env::gitrepos($home_dir){
     "${home_dir}/projects/go/src/github.com/malnick/goss"         => {'source' => 'git@github.com:malnick/goss'},
     "${home_dir}/projects/go/src/github.com/gorilla/mux"          => {'source' => 'git@github.com:gorilla/mux'},
     "${home_dir}/projects/go/src/github.com/urfave/cli"           => {'source' => 'git@github.com:urfave/cli'},
+    "${home_dir}/projects/go/src/github.com/github/hub"           => {'source' => 'git@github.com:github/hub'},
 
     # Personal Projects
     "${home_dir}/projects/technoblogic"       => {'source' => 'git@github.com:malnick/technoblogic'},
