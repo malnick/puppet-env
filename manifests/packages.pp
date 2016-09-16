@@ -10,6 +10,13 @@ class env::packages(
     'nodejs-legacy'                 => {'ensure' => 'present'},
     'xserver-xorg-input-synaptics'  => {'ensure' => 'absent'},
     'xserver-xorg-input-libinput'   => {'ensure' => 'present'},
+    'vagrant'                       => {'ensure' => 'present'},
+    'virtualbox'                    => {'ensure' => 'present'},
+    'npm'                           => {'ensure' => 'present'}, 
+    'instant-markdown-d'            => {
+      'ensure'    => 'present',
+      'provider'  => 'npm',
+    }, 
   } 
   
   $libinput_config = '
