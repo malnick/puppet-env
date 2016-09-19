@@ -19,7 +19,6 @@ class env::packages(
     'xserver-xorg-input-libinput'   => {'ensure' => 'present'},
     'vagrant'                       => {'ensure' => 'present'},
     'virtualbox'                    => {'ensure' => 'present'},
-    'npm'                           => {'ensure' => 'present'}, 
     'instant-markdown-d'            => {
       'ensure'    => 'present',
       'provider'  => 'npm',
