@@ -1,7 +1,9 @@
 class env::packages(
   $home_dir
 ){
-  include docker
+  class { '::docker': 
+    manage_kernel => false,
+  }
   class { '::tmux': }
   class { 'nodejs': }
   class { 'heroku': 
