@@ -11,6 +11,10 @@ class env::gitrepos($home_dir){
     "${home_dir}/projects/mesosphere/dcos-docker"     => {'source' => 'git@github.com:dcos/dcos-docker'},
     "${home_dir}/projects/mesosphere/dcos-enterprise" => {'source' => 'git@github.com:mesosphere/dcos-enterprise'},
     "${home_dir}/projects/mesosphere/adminrouter"     => {'source' => 'git@github.com:mesosphere/adminrouter'},
+    "${home_dir}/projects/mesosphere/dcos-metrics"    => {'source' => 'git@github.com:mesosphere/dcos-metrics'},
+    "${home_dir}/projects/mesosphere/dcos-cli"        => {'source' => 'git@github.com:dcos/dcos-cli'},
+
+
 
     # Mesosphere Golang Repos
     "${home_dir}/projects/go/src/github.com/dcos/dcos-signal"                       => {'source' => 'git@github.com:dcos/dcos-signal'},
@@ -24,6 +28,9 @@ class env::gitrepos($home_dir){
     "${home_dir}/projects/go/src/github.com/gorilla/mux"          => {'source' => 'git@github.com:gorilla/mux'},
     "${home_dir}/projects/go/src/github.com/urfave/cli"           => {'source' => 'git@github.com:urfave/cli'},
     "${home_dir}/projects/go/src/github.com/github/hub"           => {'source' => 'git@github.com:github/hub'},
+
+    # Misc projects
+    "${home_dir}/projects/linux-kernel-utilities"        => {'source' => 'git@github.com:mtompkins/linux-kernel-utilities:'},
 
     # Personal Projects
     "${home_dir}/projects/technoblogic"       => {'source' => 'git@github.com:malnick/technoblogic'},
