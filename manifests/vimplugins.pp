@@ -14,7 +14,7 @@ class env::vimplugins (
 		'solarized' => {
 			'source' => 'https://github.com/altercation/vim-colors-solarized.git'
 		},
-    'vim-airline' => {
+    'airline' => {
       'source' => 'https://github.com/vim-airline/vim-airline.git'
     },
     'dockerfile' => {
