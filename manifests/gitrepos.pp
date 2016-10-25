@@ -30,7 +30,7 @@ class env::gitrepos($home_dir){
     "${home_dir}/projects/go/src/github.com/github/hub"           => {'source' => 'git@github.com:github/hub'},
 
     # Misc projects
-    "${home_dir}/projects/linux-kernel-utilities"        => {'source' => 'git@github.com:mtompkins/linux-kernel-utilities:'},
+    "${home_dir}/projects/linux-kernel-utilities"        => {'source' => 'git@github.com:mtompkins/linux-kernel-utilities'},
 
     # Personal Projects
     "${home_dir}/projects/technoblogic"       => {'source' => 'git@github.com:malnick/technoblogic'},
