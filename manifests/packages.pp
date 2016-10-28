@@ -15,6 +15,7 @@ class env::packages(
   }
 
   $required_pkgs = {
+    'apache2-utils'                 => {'ensure' => 'present'},
     'protobuf-c-compiler'           => {'ensure' => 'present'},
     'golang-goprotobuf-dev'         => {'ensure' => 'present'},
     'python-protobuf'               => {'ensure' => 'present'},
