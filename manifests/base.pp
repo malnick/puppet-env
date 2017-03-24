@@ -38,6 +38,11 @@ class env::base (
 
 	sudo::conf { 'malnick':
      ensure  => present,
+     content => '%malnick ALL=(ALL) NOPASSWD:ALL',
+  }
+
+  sudo::conf { 'ubuntu':
+     ensure  => present,
      content => '%malnick ALL=(ALL) ALL',
   }
 
