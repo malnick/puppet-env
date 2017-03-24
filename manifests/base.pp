@@ -43,7 +43,7 @@ class env::base (
 
   sudo::conf { 'ubuntu':
      ensure  => present,
-     content => '%malnick ALL=(ALL) ALL',
+     content => '%ubuntu ALL=(ALL) NOPASSWD:ALL',
   }
 
   $file_defaults = {
