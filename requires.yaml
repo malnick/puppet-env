@@ -1,4 +1,5 @@
 ---
+puppetlabs-gce_compute: https://github.com/puppetlabs/puppetlabs-gce_compute
 sudo: https://github.com/saz/puppet-sudo
 ohmyzsh: https://github.com/acme/puppet-acme-oh-my-zsh
 vim: https://github.com/huskycode/puppet-huskycode-vim 

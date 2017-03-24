@@ -10,7 +10,7 @@ class env::gitrepos($home_dir){
     "${home_dir}/projects/mesosphere/dcos"            => {'source' => 'git@github.com:dcos/dcos'},
     "${home_dir}/projects/mesosphere/dcos-docker"     => {'source' => 'git@github.com:dcos/dcos-docker'},
     "${home_dir}/projects/mesosphere/dcos-enterprise" => {'source' => 'git@github.com:mesosphere/dcos-enterprise'},
-    "${home_dir}/projects/mesosphere/adminrouter"     => {'source' => 'git@github.com:mesosphere/adminrouter'},
+#    "${home_dir}/projects/mesosphere/adminrouter"     => {'source' => 'git@github.com:mesosphere/adminrouter'},
     "${home_dir}/projects/mesosphere/dcos-metrics"    => {'source' => 'git@github.com:mesosphere/dcos-metrics'},
     "${home_dir}/projects/mesosphere/dcos-cli"        => {'source' => 'git@github.com:dcos/dcos-cli'},
 
