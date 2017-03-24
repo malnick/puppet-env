@@ -2,7 +2,7 @@ class env::gitrepos($home_dir){
   $repo_defaults = {
     'ensure'    => 'present',
     'provider'  => 'git',
-    'user'      => 'malnick',
+    'user'      => 'ubuntu',
   }
 
   $repos = {
