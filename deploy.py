@@ -14,7 +14,7 @@ def deploy():
     subprocess.call(['sudo', 'apt-get', 'install', '-y', 'puppet'])
     requires_list = yaml.load(open(requires_path).read())
 
-    for module, url in requires_list.iteritems():
+    for module, url in requires_list.items():
         subprocess.call(['git', 'clone', url, '/etc/puppet/modules/{}'.format(module)])
 
     subprocess.call(['cp', '-R', '/tmp/env', '/etc/puppet/modules'])
