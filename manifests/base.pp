@@ -28,9 +28,12 @@ class env::base (
     uid      => '0',
   }
 
+  package { 'gconf2':
+    ensure => present,
+  }
   class { 'gnometerminalcolorssolarized': }
   gnometerminalcolorssolarized::install { 'malnick': 
-    require => User['malnick'],
+    require => [User['malnick'],Package['gconf2']],
   }
 
 	sudo::conf { 'malnick':
