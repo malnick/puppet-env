@@ -1,5 +1,5 @@
 class env::ssh ($home_dir) {
-  class { 'ssh':} ->
+  class { '::ssh':} ->
 	::ssh::client::config::user { 'malnick':
 		ensure 							=> present,
 		user_home_dir 			=> '/home/malnick',
