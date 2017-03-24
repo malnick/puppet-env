@@ -1,4 +1,8 @@
 class env::ssh ($home_dir) {
+  file { '/home/malnick/.ssh':
+    ensure => directory,
+  }
+
   class { 'ssh::client':
     storeconfigs_enabled => false,
   }
@@ -9,6 +13,7 @@ class env::ssh ($home_dir) {
 		options 						=> {
 			'StrictHostKeyChecking' => 'no',
 			'UserKnownHostsFile'		=> '/dev/null',
-		}
+		},
+    require             => File['/home/malnick/.ssh'],
 	}
 }

@@ -29,6 +29,7 @@ class env::packages(
     'instant-markdown-d'            => {
       'ensure'    => 'present',
       'provider'  => 'npm',
+      'require'   => Package['npm'],
     }, 
   } 
   
