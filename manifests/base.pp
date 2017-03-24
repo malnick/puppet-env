@@ -32,10 +32,10 @@ class env::base (
     ensure => present,
   }
 
-  class { 'gnometerminalcolorssolarized': 
-     require => [User['malnick'],Package['gconf2']],
-  }
-  gnometerminalcolorssolarized::install { 'malnick': }
+#  class { 'gnometerminalcolorssolarized': 
+#     require => [User['malnick'],Package['gconf2']],
+#  }
+#  gnometerminalcolorssolarized::install { 'malnick': }
 
 	sudo::conf { 'malnick':
      ensure  => present,
