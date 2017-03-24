@@ -26,11 +26,11 @@ class env::packages(
     'xserver-xorg-input-libinput'   => {'ensure' => 'present'},
     'vagrant'                       => {'ensure' => 'present'},
     'virtualbox'                    => {'ensure' => 'present'},
-    'instant-markdown-d'            => {
-      'ensure'    => 'present',
-      'provider'  => 'npm',
-      'require'   => Package['npm'],
-    }, 
+#    'instant-markdown-d'            => {
+#      'ensure'    => 'present',
+#      'provider'  => 'npm',
+#      'require'   => Package['npm'],
+#    }, 
   } 
   
   create_resources(package, $required_pkgs)
