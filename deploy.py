@@ -5,7 +5,6 @@ import subprocess
 requires_path = './requires.yaml'
 tmp_path = '/tmp/env'
 
-
 def deploy():
     assert os.path.exists(requires_path), "Ensure {} exists. Exiting.".format(requires_path)
     assert os.path.exists(tmp_path), "Ensure {} exists. Exiting.".format(tmp_path)
