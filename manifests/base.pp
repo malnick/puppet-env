@@ -28,14 +28,6 @@ class env::base (
     uid      => '0',
   }
 
-  package { 'gconf2':
-    ensure => present,
-  }
-
-#  class { 'gnometerminalcolorssolarized': 
-#     require => [User['malnick'],Package['gconf2']],
-#  }
-#  gnometerminalcolorssolarized::install { 'malnick': }
 
 	sudo::conf { 'malnick':
      ensure  => present,
@@ -52,7 +44,7 @@ class env::base (
     require => User['malnick'],
     owner   => 'malnick',
     group   => 'malnick',
-    mode    => 0755,
+    mode    => '0755',
   }
 
   $required_dirs = { 
