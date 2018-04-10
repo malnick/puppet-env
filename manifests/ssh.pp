@@ -3,7 +3,7 @@ class env::ssh ($home_dir) {
     storeconfigs_enabled => false,
   }
 
-	::ssh::client::config::user { 'ubuntu':
+	::ssh::client::config::user { 'malnick':
 		ensure 							=> present,
     manage_user_ssh_dir => false,
 		options 						=> {
